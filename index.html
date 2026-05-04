@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spicy Bites</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Spicy Bites</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h2>Welcome to Spicy Bites</h2>
+        <p>Delicious Food | Fresh Taste | Fast Delivery</p>
+
+        <button class="btn" onclick="location.href='#menu'">Explore Menu</button>
+    </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="section">
+    <h2>Our Delicious Menu</h2>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filter">
+        <button onclick="filterItems('all')">All</button>
+        <button onclick="filterItems('veg')">Veg</button>
+        <button onclick="filterItems('nonveg')">Non-Veg</button>
+    </div>
+
+    <!-- MAIN -->
+    <h3 class="menu-title">🥘 Main Course</h3>
+    <div class="menu-container">
+
+        <div class="menu-card nonveg">
+            <img src="assets/images/chicken-biryani.jpg">
+            <h4>Chicken Biryani</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹199</p>
+            <button class="order-btn" onclick="orderItem('Chicken Biryani')">Order Now</button>
+        </div>
+
+        <div class="menu-card nonveg">
+            <img src="assets/images/mutton-biryani.jpg">
+            <h4>Mutton Biryani</h4>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <p class="price">₹249</p>
+            <button class="order-btn" onclick="orderItem('Mutton Biryani')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/paneer.jpg">
+            <h4>Paneer Butter Masala</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹179</p>
+            <button class="order-btn" onclick="orderItem('Paneer Butter Masala')">Order Now</button>
+        </div>
+
+        <div class="menu-card nonveg">
+            <img src="./assets/images/butter-chicken.jpg">
+            <h4>Butter Chicken</h4>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <p class="price">₹229</p>
+            <button class="order-btn" onclick="orderItem('Butter Chicken')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/veg-fried-rice.jpg">
+            <h4>Veg Fried Rice</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹149</p>
+            <button class="order-btn" onclick="orderItem('Veg Fried Rice')">Order Now</button>
+        </div>
+
+    </div>
+
+    <!-- FAST FOOD -->
+    <h3 class="menu-title">🍕 Fast Food</h3>
+    <div class="menu-container">
+
+        <div class="menu-card veg">
+            <img src="assets/images/pizza.jpg">
+            <h4>Pizza</h4>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <p class="price">₹199</p>
+            <button class="order-btn" onclick="orderItem('Pizza')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/burger.jpg">
+            <h4>Burger</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹99</p>
+            <button class="order-btn" onclick="orderItem('Burger')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/fries.jpg">
+            <h4>French Fries</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹79</p>
+            <button class="order-btn" onclick="orderItem('French Fries')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/sandwich.jpg">
+            <h4>Sandwich</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹89</p>
+            <button class="order-btn" onclick="orderItem('Sandwich')">Order Now</button>
+        </div>
+
+    </div>
+
+    <!-- SOUTH INDIAN -->
+    <h3 class="menu-title">🥞 South Indian</h3>
+    <div class="menu-container">
+
+        <div class="menu-card veg">
+            <img src="assets/images/dosa.jpg">
+            <h4>Masala Dosa</h4>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <p class="price">₹80</p>
+            <button class="order-btn" onclick="orderItem('Masala Dosa')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/idli.jpg">
+            <h4>Idli</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹50</p>
+            <button class="order-btn" onclick="orderItem('Idli')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/vada.jpg">
+            <h4>Vada</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹60</p>
+            <button class="order-btn" onclick="orderItem('Vada')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/upma.jpg">
+            <h4>Upma</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹70</p>
+            <button class="order-btn" onclick="orderItem('Upma')">Order Now</button>
+        </div>
+
+    </div>
+
+    <!-- DRINKS -->
+    <h3 class="menu-title">🍹 Drinks & Desserts</h3>
+    <div class="menu-container">
+
+        <div class="menu-card veg">
+            <img src="assets/images/mango-juice.jpg">
+            <h4>Mango Juice</h4>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <p class="price">₹60</p>
+            <button class="order-btn" onclick="orderItem('Mango Juice')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/lime-soda.jpg">
+            <h4>Fresh Lime Soda</h4>
+            <p class="rating">⭐⭐⭐⭐☆</p>
+            <p class="price">₹40</p>
+            <button class="order-btn" onclick="orderItem('Lime Soda')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/icecream.jpg">
+            <h4>Ice Cream</h4>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <p class="price">₹70</p>
+            <button class="order-btn" onclick="orderItem('Ice Cream')">Order Now</button>
+        </div>
+
+        <div class="menu-card veg">
+            <img src="assets/images/gulabjamun.jpg">
+            <h4>Gulab Jamun</h4>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <p class="price">₹50</p>
+            <button class="order-btn" onclick="orderItem('Gulab Jamun')">Order Now</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>📞 +91 9876543210</p>
+    <p>📍 Rajahmundry</p>
+
+    <iframe 
+        src="https://maps.google.com/maps?q=rajahmundry&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        height="300">
+    </iframe>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Spicy Bites</p>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919876543210" class="whatsapp-btn">💬</a>
+
+<!-- ORDER POPUP -->
+<div id="orderPopup" class="popup">
+    <div class="popup-content">
+        <h3 id="foodName"></h3>
+        <p>Do you want to order this item?</p>
+        <button onclick="confirmOrder()">Yes</button>
+        <button onclick="closePopup()">Cancel</button>
+    </div>
+</div>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
