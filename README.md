@@ -4,4 +4,3 @@ internship tasks
 
 Spicy Bites is a responsive restaurant website built using HTML, CSS, and JavaScript...
 
-(put full pitch here)
